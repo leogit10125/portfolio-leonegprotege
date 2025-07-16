@@ -1,0 +1,26 @@
+/* ========================
+   CONTATO.CSS
+   Estilos exclusivos da página de sobre.nos
+   ======================== */
+
+
+.bio {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.bio h2, .bio h3 {
+  color: #00ffe7;
+}
+
+.bio ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bio ul li::before {
+  content: "🔹 ";
+}

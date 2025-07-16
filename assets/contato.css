@@ -1,0 +1,31 @@
+/* ========================
+   CONTATO.CSS
+   Estilos exclusivos da página de contato
+   ======================== */
+
+
+.contato {
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+.contato ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.contato ul li {
+  margin-bottom: 10px;
+}
+
+.contato a {
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+.contato a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,120 @@
+/* ========================
+   ESTILO GLOBAL
+======================== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1624;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ========================
+   ANIMAÇÃO: Entrada com pulso (Banner)
+======================== */
+@keyframes aparecerComZoom {
+  0%   { transform: scale(0.2); opacity: 0; }
+  25%  { transform: scale(1.05); opacity: 1; }
+  50%  { transform: scale(0.95); }
+  75%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.banner-content {
+  animation: aparecerComZoom 2.5s ease-out forwards;
+  transform-origin: center;
+}
+
+/* ========================
+   ANIMAÇÃO: Giro único
+======================== */
+@keyframes girarUmaVez {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Aplica somente à imagem animada */
+.banner-animado {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  animation: girarUmaVez 1.8s ease-out 1;
+  transform-origin: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================
+   BANNER
+======================== */
+.banner {
+  border-radius: 10px;
+  width: 110%;
+  max-height: 250px;
+  object-fit: cover;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ========================
+   CABEÇALHO E NAVEGAÇÃO
+======================== */
+header {
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #00ffe7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   SEÇÕES PRINCIPAIS
+======================== */
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ========================
+   CARDS DE PROJETO
+======================== */
+.card {
+  background-color: #1c2636;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffe7;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   RODAPÉ
+======================== */
+footer {
+  background-color: #1c2636;
+  padding: 20px;
+  font-size: 0.9em;
+}

@@ -1,0 +1,36 @@
+/* ========================
+   CONTATO.CSS
+   Estilos exclusivos da página de projetos
+   ======================== */
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  background-color: #1c2636;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00ffe7;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
