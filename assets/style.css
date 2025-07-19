@@ -10,14 +10,14 @@ body {
 }
 
 /* ========================
-   ANIMAÇÃO: Entrada com pulso (Banner)
+   CABEÇALHO E BANNER
 ======================== */
-@keyframes aparecerComZoom {
-  0%   { transform: scale(0.2); opacity: 0; }
-  25%  { transform: scale(1.05); opacity: 1; }
-  50%  { transform: scale(0.95); }
-  75%  { transform: scale(1.02); }
-  100% { transform: scale(1); }
+.banner {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 0;
+  border-radius: 10px;
 }
 
 .banner-content {
@@ -25,47 +25,32 @@ body {
   transform-origin: center;
 }
 
-/* ========================
-   ANIMAÇÃO: Giro único
-======================== */
-@keyframes girarUmaVez {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
-/* Aplica somente à imagem animada */
 .banner-animado {
   width: 150px;
   height: auto;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
   animation: girarUmaVez 1.8s ease-out 1;
-  transform-origin: center;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 1.2em;
+  margin: 10px 0;
 }
 
 /* ========================
-   BANNER
+   NAVEGAÇÃO
 ======================== */
-.banner {
-  border-radius: 10px;
-  width: 110%;
-  max-height: 250px;
-  object-fit: cover;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-/* ========================
-   CABEÇALHO E NAVEGAÇÃO
-======================== */
-header {
-  padding: 20px;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 nav a {
-  margin: 0 10px;
   color: #00ffe7;
   text-decoration: none;
   font-weight: bold;
@@ -76,38 +61,12 @@ nav a:hover {
 }
 
 /* ========================
-   SEÇÕES PRINCIPAIS
+   CONTEÚDO PRINCIPAL
 ======================== */
-section {
+.intro {
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
-}
-
-/* ========================
-   CARDS DE PROJETO
-======================== */
-.card {
-  background-color: #1c2636;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  text-align: left;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-.card h2 {
-  margin-top: 0;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #00ffe7;
-}
-
-.card a:hover {
-  text-decoration: underline;
 }
 
 /* ========================
@@ -118,28 +77,42 @@ footer {
   padding: 20px;
   font-size: 0.9em;
 }
+
+/* ========================
+   ANIMAÇÕES
+======================== */
+@keyframes aparecerComZoom {
+  0%   { transform: scale(0.2); opacity: 0; }
+  25%  { transform: scale(1.05); opacity: 1; }
+  50%  { transform: scale(0.95); }
+  75%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes girarUmaVez {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ========================
+   RESPONSIVIDADE
+======================== */
 @media (max-width: 768px) {
   body {
     padding: 10px;
   }
 
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
+  nav {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
 
-  .banner img {
-    width: 100%;
-    height: auto;
+  .banner-animado {
+    width: 120px;
   }
 
-  .projetos {
-    grid-template-columns: 1fr;
+  .intro {
+    padding: 20px;
   }
 }
